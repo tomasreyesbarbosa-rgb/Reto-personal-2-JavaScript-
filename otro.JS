@@ -1,9 +1,18 @@
-const valoresPorDefecto = { tema: "claro", volumen: 80, idioma: "es" };
-const usuarioAjustes = { tema: "oscuro", volumen: 50 };
-
-const configuracionFinal = {
-    ...usuarioAjustes,
-    ...valoresPorDefecto,
+const configDefault = {
+    idioma:"español",
+    notificaciones:true,
+    nivel:1
 };
 
-console.log(configuracionFinal);
+const configUsuario = {
+    notificaciones:false,
+    nivel:5,
+    colorFavorito:"azul"
+};
+
+const configFinal = {
+    ...configDefault,
+    ...configUsuario
+};
+
+console.log(configFinal);
